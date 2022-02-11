@@ -21,7 +21,7 @@ Mobile
  
 ### Links
  
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://zio-4.github.io/tip-calculator/](https://zio-4.github.io/tip-calculator/)
  
 ### My process
 -----------
