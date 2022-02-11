@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+ 
+ 
+body {
+ margin: 0;
+ font-family: 'space mono';
+ background: hsl(185, 41%, 84%);
+ color: hsl(183, 100%, 15%);
+ font-weight: 700;
+ 
+}
+ 
+.header {
+ color: hsl(183, 100%, 15%);
+ text-align: center;
+ margin-top: 2em;
+ p {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size: 1.5rem;
+   font-weight: bold;
+   letter-spacing: .4em;
+ }
+}
+ 
+.calculator {
+ background: white;
+ margin-top: 1.5em;
+ border-top-left-radius: 2em;
+ border-top-right-radius: 2em;
+ display: flex;
+ 
+ ::placeholder {
+   color: hsl(183, 100%, 15%);
+ }
+ 
+ .container {
+   width: 85%;
+   margin: 2em auto 1.8em auto;
+ 
+ 
+   button {
+     border-radius: .3em;
+     border: none;
+     background: hsl(183, 100%, 15%);
+     color: white;
+     padding: .3em 2em;
+     font-family: 'space mono';
+     font-size: 1.5rem;
+   }
+ 
+   .selected {
+     border-radius: .3em;
+     border: none;
+     background: hsl(174, 80%, 75%);
+     color: hsl(183, 100%, 15%);
+     padding: .3em 2em;
+     font-family: 'space mono';
+     font-size: 1.5rem;
+   }
+ 
+   input:focus {
+     outline-color: hsl(172, 67%, 45%);
+   }
+ 
+   .bill-input {
+     background: url(./images/icon-dollar.svg) no-repeat;
+     background-position: 15px 14px;
+     margin-bottom: .4em;
+   }
+ 
+   .number-of-people-input {
+     background: url(./images/icon-person.svg) no-repeat;
+     background-position: 15px 14px;
+   }
+ 
+   .bill-input, .number-of-people-input {
+     background-color: hsl(189, 41%, 97%);
+     border: none;
+     border-radius: .3em;
+     margin-top: .5em;
+     padding: .2em .7em;
+     width: 90%;
+     text-align: right;
+     font-size: 1.5rem;
+     color: hsl(183, 100%, 15%);
+     font-family: 'space mono';
+     font-weight: 700;
+   }
+ 
+   .tip-percentage-section {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin-bottom: .4em;
+ 
+     .tip-percentage {
+       font-family: 'space mono';
+       width: 47%;
+       margin-bottom: .7em;
+     }
+ 
+     .custom-amount {
+       background: hsl(189, 41%, 97%);
+       border: none;
+       border-radius: .3em;
+       padding: .3em .5em .3em 0;
+       color: hsl(183, 100%, 15%);
+       font-size: 1.5em;
+       margin: auto right;
+       width: 44%;
+       height: 50%;
+       text-align: right;
+       font-family: 'space mono';
+       font-weight: 700;
+     }
+ 
+   }
+ 
+   .result-section {
+     background: hsl(183, 100%, 15%);
+     border-radius: 1em;
+     margin-top: 2em;
+     margin-bottom: 1em;
+     padding: .5em 1em 1.5em 1em;
+     color: white;
+     line-height: .4;
+ 
+     .row {
+       display: flex;
+       margin-top: 1em;
+ 
+       .col {
+         width: 100%;
+       }
+ 
+     }
+ 
+     .results {
+       color: hsl(172, 67%, 45%);
+       font-size: 1.8rem;
+       font-weight: 700;
+       text-align: right;
+       padding-bottom: .7em;
+ 
+     }
+ 
+     .person {
+       color: hsl(186, 14%, 43%);
+       padding-bottom: 1.4em;
+     }
+ 
+     .reset-btn {
+       background: hsl(172, 67%, 45%);
+       color: hsl(183, 100%, 15%);
+       width: 100%;
+       font-weight: bold;
+       letter-spacing: .01em;
+     }
+ 
+     .reset-btn:active {
+       background: hsl(174, 80%, 75%);
+     }
+   }
+ 
+ }
+ 
+}
+ 
+@media only screen and (min-width: 920px) {
+ 
+ .header {
+   margin-top: 4em;
+ }
+  .calculator {
+   background: white;
+   border-radius: 2em;
+   max-width: 920px;
+   max-height: 476px;
+   margin: 3em auto 0 auto;
+ 
+   .container {
+     display: flex;
+     justify-content: space-between;
+     width: 90%;
+ 
+     input::-webkit-outer-spin-button,
+     input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+       margin: 0;
+     }
+ 
+     .bill-input, .number-of-people-input {
+ 
+       width: 91.5%;
+     }
+ 
+     .bill-input {
+       margin-bottom: .8em;
+     }
+ 
+     .big-col-1, .big-col-2 {
+       width: 100%;
+     }
+ 
+     .big-col-1 {
+       margin-right: 2.5em;
+     }
+    
+     .tip-percentage-section {
+       display: flex;
+       margin-bottom: .8em;
+ 
+       .tip-percentage {
+          width: 30%;
+       }
+ 
+       .custom-amount {
+         width: 24%;
+         text-align: center;
+         padding: .3em .5em .3em .5em;
+       }
+     }
+ 
+ 
+     // Results section
+     .result-section {
+       margin: auto;
+       padding: .5em 2.5em 1.5em 2.5em;
+ 
+       .row {
+         // width: 80%;
+         margin-top: 3em;
+         .col {
+           // padding: 0 2em 5em 2em;
+             padding-bottom: 3.8em;
+ 
+             .person {
+               margin-bottom: 2.5em;
+             }
+              .results {
+               // margin-bottom: .2em;
+               margin-top: .4em;
+               margin-bottom: .8em;
+               font-size: 3em;
+             }
+           }
+       }
+ 
+       .reset-btn {
+         margin-bottom: .8em;
+       }
+     }
+   }
+ }
+}
+ 
+ 
+// ## Layout
+ 
+// The designs were created to the following widths:
+ 
+// - Mobile: 375px
+// - Desktop: 1440px
+ 
+// ## Colors
+ 
+// ### Primary
+ 
+// - Strong cyan: hsl(172, 67%, 45%)
+ 
+// ### Neutral
+ 
+// - Very dark cyan: hsl(183, 100%, 15%)
+// - Dark grayish cyan: hsl(186, 14%, 43%)
+// - Dark grayish cyan: hsl(184, 14%, 56%)
+// - Light grayish cyan: hsl(185, 41%, 84%)
+// - Light grayish cyan: hsl(189, 41%, 97%)
+// - White: hsl(0, 0%, 100%)
+ 
+// ## Typography
+ 
+// ### Body Copy
+ 
+// - Font size (form inputs): 24px
+ 
+// ### Font
+ 
+// - Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+// - Weights: 400, 500, 700
+
